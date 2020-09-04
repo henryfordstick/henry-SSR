@@ -1,0 +1,74 @@
+@import url('../../assets/style/mixin.css');
+.header-top{
+  .content{
+    @include flex(space-between);
+    height: 160px;
+  }
+  .logo-link{
+    display: flex;
+    flex-direction: row;
+
+    img{
+      width: 180px;
+    }
+    .logo-description{
+      border-left: 3px solid #333;
+      height: 58px;
+      padding-left: 22px;
+      margin-left: 24px;
+      p{
+        font-family: "font", sans-serif;
+        @include font(22px);
+        font-weight: normal;
+        line-height: 1;
+        &:first-child{
+           margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
+
+.contact{
+  display: flex;
+  flex-direction: row;
+  p{
+    @include font(16px,#333,right);
+    margin-right: 12px;
+    font-weight: bold;
+  }
+  img{
+    width: 56px;
+    height: 56px;
+  }
+}
+
+
+
+
+
+
+
+.header-bottom{
+  background-color: #3364E8;
+ul{
+  @include flex(space-between);
+  flex-direction: row;
+li{
+.guide-item{
+@include font(18px,$fc);
+@include trs(background);
+  line-height: 46px;
+  display: inline-block;
+  padding: 0 25px;
+  font-weight: bold;
+&:hover,
+&.active{
+   background-color: $blueHover;
+   border-bottom: 4px solid #FF9C00;
+   padding-top: 4px;
+ }
+}
+}
+}
+}

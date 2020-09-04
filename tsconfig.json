@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es5",                          /* 具体目标版本: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'. */
+    "module": "commonjs",                     /* 指定模块代码生成: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'. */
+    "lib": ["es6","dom"],                     /* 指定要包含在编译中的库文件 */
+    "allowJs": true,                          /* 允许编译javascript文件 */
+    "jsx": "react",                           /* 指定JSX代码生成: 'preserve', 'react-native', or 'react'. */
+    "strict": true,                           /* 启用所有严格类型检查选项 */
+    "noImplicitAny": true,                    /* 对隐含的“any”类型的表达式和声明引发错误。 */
+    "noImplicitThis": true,                   /* 在隐含的“any”类型的“this”表达式上引发错误。 */
+    "moduleResolution": "node",               /* 指定模块解析策略:'node' (node .js)或'classic' (TypeScript pre-1.6)。 */
+    "baseUrl": "./src",                       /* 用于解析非绝对模块名称的基本目录。 */
+    "paths": {                                /* 将导入重新映射到相对于“baseUrl”的查找位置的一系列条目。 */
+      "@components/*": ["web/components/*"],
+      "@utils/*": ["web/utils/*"],
+      "@assets/*": ["web/assets"],
+      "@models/*": ["web/models/*"],
+      "@routes/*": ["web/routes/*"],
+      "@pages/*": ["web/pages/*"],
+      "@tools/*": ["web/tools/*"]
+    },
+    "typeRoots": ["typings", "./node_modules/@types"],/* 要包含类型定义的文件夹的列表。 */
+    "types": ["node", "jest"],                /* 要包含在编译中的类型声明文件。 */
+    "esModuleInterop": true,                  /* 通过为所有导入创建名称空间对象，启用CommonJS和ES模块之间的发射互操作性。意味着“allowSyntheticDefaultImports”。 */
+    "experimentalDecorators": true,           /* 启用对ES7装饰器的实验性支持。 */
+    "emitDecoratorMetadata": true,            /* 启用对为装饰器发出类型元数据的实验支持。 */
+    "skipLibCheck": true,                     /* 跳过声明文件的类型检查。 */
+    "forceConsistentCasingInFileNames": true  /* 不允许对同一文件使用不一致大小写的引用。 */
+  },
+  "include": ["src", "tests"],
+  "exclude": ["node_modules", "webpack.config.js", "gulpfile.js"]
+}

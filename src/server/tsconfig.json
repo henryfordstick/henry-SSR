@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true, /* 对隐含的“any”类型的表达式和声明引发错误。 */
+    "noImplicitThis": true, /* 在隐含的“any”类型的“this”表达式上引发错误。 */
+    "strict": true, /* 启用所有严格类型检查选项 */
+    "experimentalDecorators": true, /* 启用对ES7装饰器的实验性支持。 */
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["typings", "./node_modules/@types"], /* 要包含类型定义的文件夹的列表。 */
+    "baseUrl": "./", /* 用于解析非绝对模块名称的基本目录。 */
+    "paths": { /* 将导入重新映射到相对于“baseUrl”的查找位置的一系列条目。 */
+      "@interfaces/*": ["interfaces/*"],
+      "@config/*": ["config/*"],
+      "@middleware/*": ["middleware/*"]
+    }
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
