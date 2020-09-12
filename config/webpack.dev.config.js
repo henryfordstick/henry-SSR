@@ -25,7 +25,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "CRM系统架构",
-      filename: "../index.html",
+      filename: "../views/index.html",
       template: resolve(__dirname,'../src/web/index.dev.html')
     }),
     new FriendlyErrorsWebpackPlugin({

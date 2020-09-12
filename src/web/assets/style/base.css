@@ -71,6 +71,10 @@ a{
   -webkit-touch-callout:none;
 }
 
+#root{
+  overflow: hidden;
+}
+
 .content{
   width: 1080px;
   margin: 0 auto;

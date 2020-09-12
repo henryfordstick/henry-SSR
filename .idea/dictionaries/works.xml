@@ -3,6 +3,10 @@
     <words>
       <w>appenders</w>
       <w>autoescape</w>
+      <w>babelrc</w>
+      <w>jsdom</w>
+      <w>precss</w>
+      <w>uitest</w>
     </words>
   </dictionary>
 </component>

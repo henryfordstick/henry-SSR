@@ -43,32 +43,45 @@
   }
 }
 
-
-
-
-
-
-
 .header-bottom{
   background-color: #3364E8;
-ul{
-  @include flex(space-between);
-  flex-direction: row;
-li{
-.guide-item{
-@include font(18px,$fc);
-@include trs(background);
-  line-height: 46px;
-  display: inline-block;
-  padding: 0 25px;
-  font-weight: bold;
-&:hover,
-&.active{
-   background-color: $blueHover;
-   border-bottom: 4px solid #FF9C00;
-   padding-top: 4px;
- }
-}
-}
-}
+  ul{
+    @include flex(space-between);
+    flex-direction: row;
+    li{
+      .guide-item{
+        @include font(18px,$fc);
+        @include trs(background);
+        line-height: 54px;
+        display: inline-block;
+        padding: 0 25px;
+        font-weight: bold;
+        position: relative;
+        &:after{
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 4px;
+          width: 100%;
+          background-color: #FF9C00;
+          opacity: 0;
+          transition:opacity,transform .1s;
+          -webkit-transform: translateX(-20px);
+          -ms-transform: translateX(-20px);
+          transform: translateX(-20px);
+        }
+        &:hover,
+        &.active{
+         background-color: $blueHover;
+          &:after{
+            opacity: 1;
+            -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
 }

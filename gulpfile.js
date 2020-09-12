@@ -6,30 +6,20 @@ const rollup = require('gulp-rollup');
 const replace = require('@rollup/plugin-replace');
 
 const _entry = './src/server/**/*';
-const cleanEntry = './src/server/config/index.js';
+const cleanEntry = './src/server/config/index.ts';
+
+const babelConfig = {
+  babelrc: false,
+  presets: ['@babel/preset-typescript'],
+  plugins: [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@babel/plugin-transform-modules-commonjs",
+  ],
+};
 
 // 生产环境
 function buildDev(){
-  return watch(
-    _entry,
-    {
-      ignoreInitial: false,
-    },
-    function() {
-      gulp.src(_entry)
-        .pipe(
-          babel({
-            babelrc: false,
-            presets: ['@babel/preset-typescript'],
-            plugins: [
-              ["@babel/plugin-proposal-decorators", { "legacy": true }],
-              "@babel/plugin-transform-modules-commonjs"
-            ],
-          })
-        )
-        .pipe(gulp.dest('dist'));
-    }
-  );
+  return gulp.src(_entry).pipe(gulp.dest('dist'));
 }
 
 // 上线环境
@@ -38,11 +28,12 @@ function buildProd(){
     .pipe(
       babel({
         babelrc: false,
+        presets: ['@babel/preset-typescript'],
         plugins: [
-          "@babel/plugin-proposal-decorators",
+          ["@babel/plugin-proposal-decorators", { "legacy": true }],
           "@babel/plugin-transform-modules-commonjs"
         ],
-        ignore: [ cleanEntry ],
+        ignore: [cleanEntry]
       })
     )
     .pipe(gulp.dest('dist'));

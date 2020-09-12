@@ -25,7 +25,8 @@
     "experimentalDecorators": true,           /* 启用对ES7装饰器的实验性支持。 */
     "emitDecoratorMetadata": true,            /* 启用对为装饰器发出类型元数据的实验支持。 */
     "skipLibCheck": true,                     /* 跳过声明文件的类型检查。 */
-    "forceConsistentCasingInFileNames": true  /* 不允许对同一文件使用不一致大小写的引用。 */
+    "forceConsistentCasingInFileNames": true, /* 不允许对同一文件使用不一致大小写的引用。 */
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src", "tests"],
   "exclude": ["node_modules", "webpack.config.js", "gulpfile.js"]

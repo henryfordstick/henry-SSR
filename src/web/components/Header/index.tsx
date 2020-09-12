@@ -67,7 +67,7 @@ const Header:React.FunctionComponent = () => {
       <nav className="header-bottom">
         <div className="content">
           <ul>{
-            React.Children.map(navInfo,(r,i) => (
+            navInfo.map((r,i) => (
               <li key={i}>
                 <NavLink
                   exact={r.exact}
