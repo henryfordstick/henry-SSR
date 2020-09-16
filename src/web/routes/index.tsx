@@ -5,6 +5,7 @@ import NotFound from "@components/NotFound";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 
+
 const {Suspense,lazy} = React;
 
 interface Props extends RouteProps{
@@ -23,21 +24,6 @@ const routes:Props[] = [
     exact: true,
     component: lazy(() => import('@pages/About'))
   },
-  {
-    path: '/news',
-    exact: true,
-    component: lazy(() => import('@pages/News'))
-  },
-  {
-    path: '/service',
-    exact: true,
-    component: lazy(() => import('@pages/Serve'))
-  },
-  {
-    path: '/ours',
-    exact: true,
-    component: lazy(() => import('@pages/Ours'))
-  }
 ];
 
 const Routes = () => (
@@ -65,7 +51,7 @@ const Routes = () => (
       </Switch>
 
     </Suspense>
-    <Footer/>
+    {/*<Footer/>*/}
   </>
 
 );

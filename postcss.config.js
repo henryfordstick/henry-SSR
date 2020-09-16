@@ -6,7 +6,11 @@ module.exports = {
         'nesting-rules': true,
       },
     },
-    precss: {}
+    'postcss-import': {
+
+    },
+    'node-css-mqpacker': {}
+
   },
 
 };
